@@ -49,7 +49,7 @@ const Navbar = () => {
                     className="inline-block object-contain cursor-pointer lg:hidden"
                 />
                 <div
-                    className={`rounded-full items-center border border-[#232323] border-collapse fixed top-[60px] right-0 bg-[#ffffff] z-10 shadow-secondary py-4 ${
+                    className={`mobile-menu rounded-full items-center border border-[#232323] border-collapse fixed top-[60px] right-0 bg-[#ffffff] z-10 shadow-secondary py-4 ${
                       !toggleDrawer ? "opacity-0 translate-x-full" : "opacity-100 translate-x-0"
                   } transition-all duration-700 ease-in-out`}
                 >
