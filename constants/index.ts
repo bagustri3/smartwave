@@ -74,8 +74,8 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
     title: "Contact Us",
     links: [
-        { label: "Admin", value: "(+62) 822-9575-98812" },
-        { label: "Email", value: "bagus@codecation.tech" },
+        { label: "Admin", value: "(+62) 821-2722-6844" },
+        { label: "Email", value: "tribagus0510@gmail.com" },
     ],
 };
 
