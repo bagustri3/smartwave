@@ -47,7 +47,7 @@ export const FEATURES = [
         icon: "/user.svg",
         variant: "orange",
         description:
-            "Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing",
+            "24/7 Support. We are always available to answer your questions and provide support, ensuring your experience is smooth and hassle-free.",
     },
 ];
 

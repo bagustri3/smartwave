@@ -2,8 +2,17 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const GetApp = () => {
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+    const [message, setMessage] = React.useState("");
+    const [budget, setBudget] = React.useState("");
+
+    const router = useRouter();
+
     return (
         <section className="flexCenter w-full flex-col pb-[120px]">
             <div className="get-app">
@@ -21,8 +30,9 @@ const GetApp = () => {
                             </label>
                             <input
                                 onChange={(e) => {
-                                    console.log(e.target.value);
+                                    setName(e.target.value);
                                 }}
+                                id="form-name"
                                 className="rounded-md outline-none text-black"
                                 type="text"
                             />
@@ -34,8 +44,12 @@ const GetApp = () => {
                             <input
                                 className="rounded-md outline-none text-black"
                                 type="email"
+                                id="form-email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 required
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
                             />
                         </div>
                     </div>
@@ -45,6 +59,10 @@ const GetApp = () => {
                                 Phone Number
                             </label>
                             <input
+                                onChange={(e) => {
+                                    setPhone(e.target.value);
+                                }}
+                                id="form-number"
                                 className="rounded-md outline-none text-black"
                                 type="text"
                             />
@@ -54,20 +72,27 @@ const GetApp = () => {
                                 Budget
                             </label>
                             <select
+                                onChange={(e) => {
+                                    setBudget(e.target.value);
+                                }}
                                 id="budget"
                                 className="w-full rounded-md bg-gray-10 outline-none text-black"
                             >
-                                <option selected disabled>
+                                <option selected value={""} disabled>
                                     Choose Your Budget
                                 </option>
-                                <option value="US">{"< Rp.500.000"}</option>
-                                <option value="CA">
-                                    {"> Rp.500.000 & < Rp.1.000.000"}
+                                <option value="Under Rp.1.000.000">
+                                    {"Under Rp.1.000.000"}
                                 </option>
-                                <option value="FR">
-                                    {"> Rp.1.000.000 & < Rp.2.000.000"}
+                                <option value="> Rp.1.000.000 & < Rp.10.000.000">
+                                    {"> Rp.1.000.000 & < Rp.10.000.000"}
                                 </option>
-                                <option value="DE">{"> Rp.2.000.000"}</option>
+                                <option value="> Rp.10.000.000 & < Rp.50.000.000">
+                                    {"> Rp.10.000.000 & < Rp.50.000.000"}
+                                </option>
+                                <option value="> Rp.50.000.000">
+                                    {"> Rp.50.000.000"}
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -79,6 +104,11 @@ const GetApp = () => {
                                     title="SUBMIT"
                                     icon=""
                                     variant="btn_dark_green"
+                                    handleClick={() => {
+                                        router.replace(
+                                            `https://wa.me/6282127226844?text=${`Hi%20%2ASmartwave%2A%2C%0AIm%20%2A${name}%2A%2C%0AMy%20email%20is%20%2A${email}%2A%2C%0AMy%20phone%20number%20at%20%2A${phone}%2A%2C%0AAnd%20this%20is%20my%20Budget%20${budget}.%0A%0AI%20took%20an%20interest%20to%20get%20to%20know%20about%20your%20company%2C%20may%20we%20have%20a%20conversation%20about%20your%20products%3F%20`}`
+                                        );
+                                    }}
                                 />
                             </div>
                         </div>
