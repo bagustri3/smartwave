@@ -92,11 +92,16 @@ export const SOCIALS = {
             image: "/instagram.svg",
             href: "https://instagram.com/smartwave_innovations?igshid=YmMyMTA2M2Y=",
         },
-        // {
-        //     label: "Terms Of Service",
-        //     image: "facebook.svg",
-        //     href: "/terms-of-service",
-        // },
+        {
+            label: "LinkedIn",
+            image: "/linkedin.svg",
+            href: "https://www.linkedin.com/company/smartwave-it",
+        },
+        {
+            label: "Discord",
+            image: "/discord.svg",
+            href: "https://discord.gg/vezX6VJWhM",
+        },
         // "/instagram.svg",
         // "/twitter.svg",
         // "/youtube.svg",

@@ -20,9 +20,9 @@ const GetApp = () => {
                     <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">
                         Join us Growth Partner!
                     </h2>
-                    <p className="regular-16 text-gray-10">
-                        Available on Instagram and Facebook
-                    </p>
+                    {/* <p className="regular-16 text-gray-10">
+                        Available on Discord
+                    </p> */}
                     <div className="flex flex-col gap-5 xl:flex-row">
                         <div className="flex flex-col">
                             <label className="bold-16 whitespace-nowrap cursor-pointer">

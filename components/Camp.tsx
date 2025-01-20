@@ -20,7 +20,7 @@ const CampSite = ({
         <div
             className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0`}
         >
-            <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
+            <div className="flex h-full flex-col items-start justify-between p-10 lg:px-20 lg:py-10">
                 <div className="flexCenter gap-4">
                     <div className="rounded-full bg-green-50 p-4 ">
                         <Image
@@ -38,14 +38,14 @@ const CampSite = ({
                     </div>
                 </div>
 
-                <div className="flexCenter gap-10">
-                    <span className="flex -space-x-1 overflow-hidden">
+                <div className="flexCenter gap-6">
+                    <span className="flex -space-x-4 overflow-hidden">
                         {uri.map((url) => (
                             <Image
                                 className="inline-block bg-white bg-gradient-to-tr from-white via-50 h-10 w-10 rounded-full"
                                 src={url}
                                 key={url}
-                                alt="person"
+                                alt="feature"
                                 width={52}
                                 height={52}
                             />

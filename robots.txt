@@ -1,0 +1,16 @@
+# Allow all user-agents to access the entire site
+User-agent: *
+Allow: /
+
+# Block crawlers from accessing sensitive or irrelevant directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /login/
+
+# Allow specific assets to be crawled
+Allow: /public-assets/
+
+# Specify the location of your sitemap
+Sitemap: https://www.yourwebsite.com/sitemap.xml

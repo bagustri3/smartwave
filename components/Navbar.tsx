@@ -1,7 +1,7 @@
 "use client";
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { useRouter } from "next/navigation";
 import Button from "./Button";
 import { useState } from "react";
@@ -11,20 +11,29 @@ const Navbar = () => {
     const [toggleDrawer, setToggleDrawer] = useState(false);
     return (
         <nav className="flexBetween max-container padding-container relative z-30 py-5">
-            <Link href="/">
+            <Link href="/" className="flex items-center">
+                <Image
+                    src={"/smartwave_logo.png"}
+                    alt="logo"
+                    width={50}
+                    height={41}
+                />
                 <b>SmartWave</b>
             </Link>
 
             <ul className="hidden h-full gap-12 lg:flex">
-                {NAV_LINKS.map((link) => (
-                    <Link
-                        href={link.href}
-                        key={link.key}
-                        className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
-                    >
-                        {link.label}
-                    </Link>
-                ))}
+                {NAV_LINKS.map((link) => {
+                    console.log(link.href);
+                    return (
+                        <Link
+                            href={link.href}
+                            key={link.key}
+                            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+                        >
+                            {link.label}
+                        </Link>
+                    );
+                })}
             </ul>
 
             {/* <div className="lg:flexCenter hidden">
@@ -50,8 +59,10 @@ const Navbar = () => {
                 />
                 <div
                     className={`mobile-menu rounded-full items-center border border-[#232323] border-collapse fixed top-[60px] right-0 bg-[#ffffff] z-10 shadow-secondary py-4 ${
-                      !toggleDrawer ? "opacity-0 translate-x-full" : "opacity-100 translate-x-0"
-                  } transition-all duration-700 ease-in-out`}
+                        !toggleDrawer
+                            ? "opacity-0 translate-x-full"
+                            : "opacity-100 translate-x-0"
+                    } transition-all duration-700 ease-in-out`}
                 >
                     <ul className="mb-4">
                         {NAV_LINKS.map((e) => (

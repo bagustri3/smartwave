@@ -44,10 +44,10 @@ const Guide = () => {
                         src="/meter.svg"
                         alt="meter"
                         width={16}
-                        height={158}
+                        height={16}
                         className="h-full w-auto"
                     />
-                    <div className="flexBetween flex-col">
+                    <div className="flexBetween flex-col gap-10">
                         <div className="flex w-full flex-col">
                             <div className="flexBetween w-full">
                                 <p className="regular-16 text-gray-20">
@@ -57,7 +57,15 @@ const Guide = () => {
                             </div>
                             <p className="bold-20 mt-2">Project Completion</p>
                         </div>
-
+                        {/* <div className="flex w-full flex-col">
+                            <div className="flexBetween w-full">
+                                <p className="regular-16 text-gray-20">
+                                    Destination
+                                </p>
+                                <p className="bold-16 text-green-50"></p>
+                            </div>
+                            <p className="bold-20 mt-2">Project Completion</p>
+                        </div> */}
                         <div className="flex w-full flex-col">
                             <p className="regular-16 text-gray-20">
                                 Start track

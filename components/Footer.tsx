@@ -24,7 +24,10 @@ const Footer = () => {
                                     <ul className="regular-14 flex flex-col gap-4 text-gray-30">
                                         {links.map(({ href, label }) => {
                                             return (
-                                                <Link href={`${href}`} key={label}>
+                                                <Link
+                                                    href={`${href}`}
+                                                    key={label}
+                                                >
                                                     {label}
                                                 </Link>
                                             );
@@ -59,23 +62,40 @@ const Footer = () => {
                         <div className="flex flex-col gap-5">
                             <FooterColumn title={SOCIALS.title} key={"columns"}>
                                 <ul className="regular-14 flex gap-4 text-gray-30">
-                                    {SOCIALS.links.map(({ label, image, href}, i) => (
-                                        <Link href={href} key={label}>
-                                            <Image
-                                                src={image}
-                                                alt={label}
-                                                key={`link${i}`}
-                                                width={24}
-                                                height={24}
-                                            />
-                                        </Link>
-                                    ))}
+                                    {SOCIALS.links.map(
+                                        ({ label, image, href }, i) => (
+                                            <Link
+                                                target="_blank"
+                                                href={href}
+                                                key={label}
+                                            >
+                                                <Image
+                                                    src={image}
+                                                    alt={label}
+                                                    key={`link${i}`}
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                            </Link>
+                                        )
+                                    )}
                                 </ul>
                             </FooterColumn>
                         </div>
                     </div>
                 </div>
 
+                <div className="border bg-gray-20" />
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7922.716934733478!2d107.4999084!3d-6.8475607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e31c0ba9581d%3A0xc0515734bebb7a21!2sSmartWave%20Innovations%20Technologies!5e0!3m2!1sid!2sid!4v1737232302889!5m2!1sid!2sid"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    hl="id"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full justify-center items-center"
+                />
                 <div className="border bg-gray-20" />
                 <p className="regular-14 w-full text-center text-gray-30">
                     2024 SmartWave Innovations Technology | All rights reserved
