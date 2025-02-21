@@ -92,7 +92,6 @@ const Footer = () => {
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
-                    hl="id"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="w-full justify-center items-center"
                 />
